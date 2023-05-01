@@ -52,3 +52,14 @@
 //     const jsonData = await response.json();
 //     console.log(jsonData);
 // }
+
+function ativarbotao(boo){
+    document.getElementById("editaralerta").disabled = !boo;
+    if(!boo){
+        $('.modal').modal('toggle')
+    }
+}
+
+function mostrarvalor(){
+    document.getElementById("inputvalor").value = document.getElementById("alertavalor").dataset.valorAlert;
+}

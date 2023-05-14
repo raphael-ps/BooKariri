@@ -1,57 +1,40 @@
-// $(document).ready(function() {
-//     $('.selectpicker').selectpicker().ajaxSelectPicker({
-//         ajax: {
-//             url: "http://localhost:8080/api/buscar/aeroportos",
-//             dataType: 'json',
-//             delay: 250,
-//             data: function (params) {
-//                 var query = {
-//                     city: params.term
-//                 }
-//                 return query;
-//             },
-//             preprocessData: function (data) {
-//                 var i, l = data.length, array = [];
-//                 if (l) {
-//                     for (i = 0; i < l; i++) {
-//                         array.push($.extend(true, data[i], {
-//                             text : data[i].Name,
-//                             value: data[i].Email,
-//                             data : {
-//                                 subtext: data[i].Email
-//                             }
-//                         }));
-//                     }
-//                 }
-//                 return array;
-//             }
-//         // minimumInputLength: 1,
-//         // templateResult: formatOption,
-//         // templateSelection: formatSelection
-//         }
-//     });
-// });
-
-// function formatOption(aeroporto) {
-//     if (aeroporto.loading) {
-//       return aeroporto.text;
-//     }
-//     var $container = $(
-//         "<option value="+aeroporto+">"+aeroporto.city+" - "+aeroporto.iata+"</option>"
-//     );
-//     return $container;
-// }
-  
-// function formatSelection(aeroporto) {
-//     return aeroporto.city+" - "+aeroporto.iata;
-// }
-
-// async function logJSONData() {
-//     const url = "http://localhost:8080/api/buscar/aeroportos"
-//     const response = await fetch(url);
-//     const jsonData = await response.json();
-//     console.log(jsonData);
-// }
+$(document).ready(function() {
+    var url = "http://localhost:8080/api/aeroportos"
+    $('.selectpicker').selectpicker().ajaxSelectPicker({
+        ajax: {
+            url: url,
+            type: "GET",
+            data: function() {
+                var params = {
+                    city: '{{{q}}}'
+                };
+                return params
+            }
+        },
+        locale: {
+            emptyTitle: 'Search for contact...'
+        },
+        preprocessData: function(data){
+            var array = [];
+            for(var i = 0; i < data.length; i++) {
+                var current = data[i];
+                array.push(
+                    {
+                        'value': current.id,
+                        'text': current.iata + ' - ' + current.city,
+                        // 'data': {
+                        //     'icon': 'icon-person',
+                        //     'subtext': 'Internal'
+                        // },
+                        'disabled': false
+                    }
+                );
+            }
+            return array;
+        },
+        preserveSelected: false
+    });
+});
 
 function ativarbotao(boo){
     document.getElementById("editaralerta").disabled = !boo;

@@ -11,24 +11,21 @@
     <img src="https://img.freepik.com/premium-vector/tourists-airport-people-traveling-with-luggage-women-sitting-with-baggage-waiting-flight_530733-2567.jpg?w=1380" class="img-fluid"> 
     <div class="login">
       <h1 class="text-center">Flight2Gather</h1>
-      <form>
+      <form method="post" action="http://localhost:8080/api/cadastro">
         <div class="form-group">
-          <label class="form-label" for ="email">Email</label>
-          <input class="form-control" type="email"  id="emailInput">
+          <label class="form-label" for="nome">Nome</label>
+          <input class="form-control" type="text" name="nome" required/>
         </div>
-
         <div class="form-group">
-          <label class="form-label" for ="email">Senha</label>
-          <input class="form-control" type="password"  id="passwordInput">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-control" type="email" name="email" required/>
         </div>
-
-        <div class="form-group form-check">
-          <input class="form-check-input" type="checkbox"  id="check">
-          <label class="form-check-label" for ="checkbox">Lembrar de mim</label>
+        <div class="form-group">
+          <label class="form-label" for="senha">Senha</label>
+          <input class="form-control" type="password" name="senha" required/>
         </div>
-
-        <input class="btn btn-success" type="submit" value="Login" onclick="logJSONData()">
-      </form> 
+        <button class="btn btn-success" type="submit">Criar conta</button>
+      </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

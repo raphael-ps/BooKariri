@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var url = "http://localhost:8080/api/aeroportos"
+    var url = "http://localhost:8080/api/aeroportos/buscar"
     $('.selectpicker').selectpicker().ajaxSelectPicker({
         ajax: {
             url: url,
@@ -12,7 +12,7 @@ $(document).ready(function() {
             }
         },
         locale: {
-            emptyTitle: 'Search for contact...'
+            emptyTitle: 'Nome da cidade...'
         },
         preprocessData: function(data){
             var array = [];

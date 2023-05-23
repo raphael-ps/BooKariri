@@ -10,8 +10,8 @@
   <body>
     <img src="https://img.freepik.com/premium-vector/tourists-airport-people-traveling-with-luggage-women-sitting-with-baggage-waiting-flight_530733-2567.jpg?w=1380" class="img-fluid"> 
     <div class="login">
-      <h1 class="text-center">Flight2Gather</h1>
-      <form method="post" action="http://localhost:8080/api/cadastro">
+      <h1 class="text-center">Quero Passagens</h1>
+      <form method="post" action="http://localhost:8080/api/contas/cadastro">
         <div class="form-group">
           <label class="form-label" for="nome">Nome</label>
           <input class="form-control" type="text" name="nome" required/>
@@ -25,11 +25,14 @@
           <input class="form-control" type="password" name="senha" required/>
         </div>
         <button class="btn btn-success" type="submit">Criar conta</button>
+        <div class="form-group text-center redirecionar">
+          <a href="index.html"><h6 class="h6">Já possui uma conta? Faça o login</h6></a>
+        </div>
       </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-		<script src="javascript/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <script src="javascript/script.js"></script>
   </body>
 </html>

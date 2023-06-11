@@ -5,13 +5,13 @@
 } */
 
 
-
 main{
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: lightblue;
+    background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/leaves.png");
 }  
 
 

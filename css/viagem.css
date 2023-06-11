@@ -1,0 +1,54 @@
+html,
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+}
+
+main {
+    flex-grow: 1;
+    flex-basis: auto;
+    overflow: auto;
+    min-height: 230px;
+}
+
+
+#card-list .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.custom-card {
+    margin: 5px;
+    text-align: center;
+}
+
+.custom-card-button a {
+    margin-top: 10px;
+    border: none;
+}
+
+.custom-card-img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 64px;
+    max-height: 64px;
+    object-fit: cover;
+    object-position: center;
+    align-self: center;
+    text-align: center;
+}
+
+.custom-card-alert{
+    max-width: 128px;
+    max-height: 128px;
+    object-fit: cover;
+    object-position: center;
+    align-self: center;
+    text-align: center;
+}
+
+.price{
+    margin-top: 10px;
+}

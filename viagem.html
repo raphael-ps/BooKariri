@@ -38,9 +38,8 @@
           </div>
       </nav>
     </header>
-
     <main class="container d-flex">
-      <div class="col-8 border">
+      <div class="col-md-8 col-12 border scrollarea">
         <div id="card-list">
           <div class="grid-container">
             <div class="card custom-card">
@@ -79,25 +78,54 @@
           </div>
         </div>
       </div>
-      <div class="col-4 border">
+      <div class="col-md-4 d-none d-md-block">
         <div class="card custom-card">
           <div class="card-body">
-            <h5 class="card-title"></h5>
-            <img src="img/BookAriri.png" class="custom-card-alert" alt="Dropbox">
+            <img src="img/BookAriri.png" class="custom-card-alert" alt="BooKariri">
             <p class="price">
               Gostaria de criar um alerta de preço para essa viagem?
             </p>
-
             <div class="form-group">
               <label class="form-label" for="nome">Quero pagar</label>
               <input class="form-control" type="number" placeholder="Ex: R$1899" name="prices" required/>
             </div>
-
             <div class="custom-card-button">
               <a href="#" class="btn btn-warning">Criar Alerta</a>
             </div>
           </div>
         </div>
+      </div>
+      <div class="modal fade" id="alert-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header ">
+              <h3 class="modal-title h4" id="exampleModalLabel">Alerta de preços</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="img/BookAriri.png" class="custom-card-alert" alt="BooKariri">
+              <p class="price">
+                Gostaria de criar um alerta de preço para essa viagem?
+              </p>
+              <div class="form-group">
+                <label class="form-label" for="nome">Quero pagar</label>
+                <input class="form-control" type="number" placeholder="Ex: R$1899" name="prices" required/>
+              </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+              <a href="#" class="btn btn-warning">Criar Alerta</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="position-absolute text-right fixed-bottom alert d-block d-md-none">
+        <button class="btn btn-warning" data-toggle="modal" data-target="#alert-modal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+          </svg>
+      </button>
       </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>

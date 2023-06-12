@@ -17,9 +17,17 @@ main {
     overflow-y: auto;
 }
 
+#card-list {
+    margin-top: 20px;
+}
+
 #card-list .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.alert-container{
+    margin-top: 20px;
 }
 
 .custom-card {
